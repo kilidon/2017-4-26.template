@@ -1,0 +1,54 @@
+<ion-header-bar class="mc-back-cyan">
+  <section style="color:#fff;padding:10px;margin-right: 10px">
+    <span ng-click="openModal()" style="font-size: 16px">北京市 <i class="icon ion-chevron-down"></i></span>
+  </section>
+  <label class="item item-input" style="margin-top:3px;border-radius:15px;padding-left:20px;width: 70%;height: 30px">
+    <i ng-class="changeFocus?'search-focus':''" style="transition: 0.3s ease-in-out;padding:8px;background:url('images/title_icon/ic_search.png') no-repeat center;background-size: 16px;margin-left:35%;margin-right: 5px"></i>
+    <input ng-model="searchKW" ng-blur="searchBlur()" ng-focus="searchFocus()" type="search" placeholder="搜索">
+  </label>
+</ion-header-bar>
+<ion-content class="has-header">
+  <ion-slide-box auto-play="true" style="height:200px" does-continue="true">
+    <ion-slide>
+      <img src="images/scrollerPicture/coffee.png" width="100%">
+    </ion-slide>
+    <ion-slide>
+      <img src="images/scrollerPicture/flower.jpg" width="100%">
+    </ion-slide>
+    <ion-slide>
+      <img src="images/scrollerPicture/ktv.jpg" width="100%">
+    </ion-slide>
+  </ion-slide-box>
+  <!--功能区域-->
+  <article class="row text-center" id="m-shop-article" style="padding:0">
+    <div class="col" style="padding: 0">
+      <a ng-class="currentIndex==1?'ma-active':''"
+         ng-click="changeFuncTab(1)" >美食</a>
+    </div>
+    <div class="col" style="padding: 0">
+      <a ng-class="currentIndex==2?'ma-active':''"
+         ng-click="changeFuncTab(2)" >KTV</a>
+    </div>
+  </article>
+  <!--美食-->
+  <div class="list" ng-show="currentIndex==1">
+    <a href="#" class="item item-thumbnail-left">
+      <img ng-src="images/1_03.png" class="img-responsive">
+      <h2>肯德基 <span style="font-size: 12px;color:#707070">3.5km</span></h2>
+      <p style="margin: 10px 0;">[牡丹园店]50元代金卷一份，可叠加</p>
+      <p style="font-size: 12px;color:#707070"><span style="font-size: 18px;color:#6ab494">￥47.5</span> 已售230</p>
+    </a>
+    <a href="#" class="item item-thumbnail-left">
+      <img ng-src="images/1_06.png" class="img-responsive">
+      <h2>京城一锅羊蝎子火锅 <span style="font-size: 12px;color:#707070">9.8km</span></h2>
+      <p style="margin: 10px 0;">[五道口店]100元代金卷一份，可叠加</p>
+      <p style="font-size: 12px;color:#707070"><span style="font-size: 18px;color:#6ab494">￥79</span> 已售785</p>
+    </a>
+    <a href="#" class="item item-thumbnail-left">
+      <img ng-src="images/1_03.png" class="img-responsive">
+      <h2>肯德基 <span style="font-size: 12px;color:#707070">3.5km</span></h2>
+      <p style="margin: 10px 0;">[牡丹园店]50元代金卷一份，可叠加</p>
+      <p style="font-size: 12px;color:#707070"><span style="font-size: 18px;color:#6ab494">￥47.5</span> 已售230</p>
+    </a>
+  </div>
+</ion-content>

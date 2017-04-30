@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="css/ionic.css">
+  <link rel="stylesheet" href="app_css/index.css">
+  <script src="js/ionic.bundle.js"></script>
+  <title>meishi</title>
+</head>
+<body ng-controller="parentCtrl">
+<ion-nav-view></ion-nav-view>
+<!--底部导航-->
+<ion-tabs class="tabs-icon-top">
+  <ion-tab title="团购" href="#/Shop" icon-on="mc-bar-shop-on" icon-off="mc-bar-shop">
+    <ion-nav-view name="shop-tab"></ion-nav-view>
+  </ion-tab>
+  <ion-tab title="我的" href="#/Individual" icon-on="mc-bar-individual-on" icon-off="mc-bar-individual">
+    <ion-nav-view name="individual-tab"></ion-nav-view>
+  </ion-tab>
+</ion-tabs>
+<script src="app_js/index.js"></script>
+</body>
+</html>
